@@ -1,0 +1,458 @@
+/* ========================================
+   OBSIDIAN THEME: Mocha Latte Cafe 001
+   AUTHOR: DA Rasmussen
+   LICENSE: CC0-1.0
+   ======================================== */
+
+/* ----------------------------
+   GLOBAL RESETS & FOUNDATIONS
+   ---------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font Stack - Fallbacks included */
+  --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-monospace: "Source Code Pro", "Fira Code", "JetBrains Mono", Consolas, monospace;
+}
+
+/* ----------------------------
+   THEME VARIABLES (DARK MODE)
+   ---------------------------- */
+.theme-dark {
+  /* Core Palette */
+  --amber-base: #d19e79;      /* Primary accent */
+  --amber-hover: #ab6c46;     /* Interactive hover */
+  --amber-active: #fff0ea;    /* Active states */
+  --amber-border: #4c2c21;    /* Borders & subtle accents */
+  
+  /* Backgrounds */
+  --background-primary: #4c2c21;      /* Note canvas */
+  --background-primary-alt: #2a1a12;  /* Active note title */
+  --background-secondary: #1a0f0a;    /* Sidebar */
+  --background-secondary-alt: #25160f; /* Sidebar headers */
+  --background-accent: var(--amber-base);
+  
+  /* Modifiers (contrast layers) */
+  --background-modifier-cover: rgba(0, 0, 0, 0.85);
+  --background-modifier-border: var(--amber-border);
+  --background-modifier-form-field: rgba(224, 172, 134, 0.25);
+  --background-modifier-border-focus: var(--amber-base);
+  --background-modifier-border-hover: var(--amber-hover);
+  --background-modifier-hover: rgba(109, 65, 35, 0.35);
+  
+  /* Metadata */
+  --metadata-label-text-color: #c9a58c;
+  --metadata-label-background: rgba(60, 35, 20, 0.85);
+  --metadata-property-background: rgba(70, 40, 25, 0.4);
+  
+  /* Text Hierarchy */
+  --text-normal: #e8d9c9;     /* Body text */
+  --text-muted: #b89a80;      /* Secondary text */
+  --text-faint: #8a6d55;      /* Tertiary text */
+  --text-active: #fff0ea;     /* Active elements */
+  --text-selection: rgba(179, 139, 112, 0.95);
+  --text-highlight-bg: rgba(255, 220, 180, 0.45);
+  --text-highlight-bg-active: rgba(255, 160, 100, 0.6);
+  --text-on-accent: #fff0ea;
+  --text-on-accent-inverted: var(--amber-border);
+  
+  /* Links & Accents */
+  --text-accent: var(--amber-border);
+  --text-accent-hover: var(--amber-base);
+  
+  /* Interactive Elements */
+  --interactive-normal: var(--amber-base);
+  --interactive-hover: var(--amber-hover);
+  --interactive-accent: var(--amber-border);
+  --interactive-accent-hover: var(--amber-hover);
+  
+  /* UI Components */
+  --scrollbar-bg: #150c07;
+  --scrollbar-thumb-bg: rgba(85, 50, 30, 0.6);
+  --scrollbar-active-thumb-bg: var(--amber-border);
+  --icon-color-normal: var(--amber-base);
+  --icon-color-hover: var(--amber-active);
+  --nav-item-color: var(--amber-base);
+  --nav-item-color-hover: var(--amber-hover);
+  --nav-item-color-active: var(--amber-active);
+  --nav-item-color-background-hover: rgba(209, 158, 121, 0.15);
+  --toggle-thumb-color: var(--amber-border);
+  --dropdown-background: var(--background-secondary);
+  --status-bar-background: var(--background-secondary-alt);
+  --search-icon-color: var(--amber-base);
+  --sync-avatar-color-current-user: var(--amber-base);
+}
+
+/* ----------------------------
+   THEME VARIABLES (LIGHT MODE)
+   ---------------------------- */
+.theme-light {
+  /* Core Palette */
+  --amber-base: #a87c5e;
+  --amber-hover: #8c654a;
+  --amber-active: #f8f3f0;
+  --amber-border: #7a5d45;
+  --amber-other: #f2e3c3;   /* Additional accent (e.g. links) */
+
+  
+  /* Backgrounds */
+  --background-primary: #fcf1db;
+  --background-primary-alt: #f5f0eb;
+  --background-secondary: #f2e3c3;
+  --background-secondary-alt: #f2e3c3;
+  --background-accent: var(--amber-base);
+  
+  /* Modifiers */
+  --background-modifier-border: #d4c8b8;
+  --background-modifier-form-field: rgba(168, 124, 94, 0.15);
+  --background-modifier-border-focus: var(--amber-base);
+  --background-modifier-hover: rgba(138, 101, 74, 0.1);
+  
+  /* Text Hierarchy */
+  --text-normal: #3a2f25;
+  --text-muted: #7a6555;
+  --text-faint: #a89585;
+  --text-active: #2a1f15;
+  --text-selection: rgba(138, 101, 74, 0.25);
+  --text-highlight-bg: rgba(255, 230, 200, 0.5);
+  --text-highlight-bg-active: rgba(255, 180, 120, 0.6);
+  --text-on-accent: #fff;
+  --text-on-accent-inverted: var(--amber-border);
+  
+  /* Links & Accents */
+  --text-accent: var(--amber-border);
+  --text-accent-hover: var(--amber-base);
+  
+  /* Interactive Elements */
+  --interactive-normal: var(--amber-base);
+  --interactive-hover: var(--amber-hover);
+  --interactive-accent: var(--amber-border);
+  --interactive-accent-hover: var(--amber-hover);
+  
+  /* UI Components */
+  --scrollbar-bg: rgba(0, 0, 0, 0.03);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.15);
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.25);
+  --icon-color-normal: var(--amber-border);
+  --icon-color-hover: var(--amber-base);
+  --nav-item-color: var(--amber-border);
+  --nav-item-color-hover: var(--amber-hover);
+  --nav-item-color-active: var(--amber-active);
+  --nav-item-color-background-hover: rgba(168, 124, 94, 0.1);
+  --toggle-thumb-color: var(--amber-base);
+  --dropdown-background: var(--background-secondary);
+  --status-bar-background: var(--background-secondary-alt);
+  --search-icon-color: var(--amber-border);
+  --sync-avatar-color-current-user: var(--amber-base);
+}
+
+/* ----------------------------
+   APPLICATION SHELL
+   ---------------------------- */
+/* Startup Progress */
+.progress-bar .progress-bar-line { background-color: var(--background-secondary); }
+.progress-bar .progress-bar-subline { background-color: var(--amber-base); }
+
+/* Modals & Overlays */
+.modal, .prompt, .menu, .tooltip {
+  background-color: var(--background-primary);
+  border-color: var(--background-modifier-border);
+  color: var(--text-normal);
+}
+.tooltip {
+  --element-selector-highlight-outline: 1px dashed var(--interactive-accent);
+  --element-selector-highlight-background-color: rgba(209, 158, 121, 0.3);
+  --element-selector-tooltip-background-color: var(--background-primary);
+  --element-selector-tooltip-border: 1px solid var(--background-modifier-border);
+  --element-selector-tooltip-border-radius: 6px;
+  --element-selector-tooltip-padding: 1em;
+}
+
+/* Notifications */
+.notice {
+  background-color: var(--background-modifier-cover);
+  color: var(--text-normal);
+  border-left: 3px solid var(--amber-base);
+}
+
+/* ----------------------------
+   WORKSPACE LAYOUT
+   ---------------------------- */
+/* Title Bar */
+.titlebar-text, 
+.titlebar-button.mod-logo {
+  color: var(--amber-base) !important;
+  opacity: 1 !important;
+}
+.titlebar-button { color: var(--icon-color-normal) !important; }
+
+/* Ribbons */
+.workspace-ribbon {
+  background-color: var(--background-secondary);
+  color: var(--amber-border) !important;
+}
+
+/* Side Panels */
+.mod-right-split {
+  background-color: var(--background-secondary) !important;
+  border-left: 1px solid var(--background-modifier-border) !important;
+}
+.workspace-tabs {
+  border-bottom: 1px solid var(--amber-base);
+  color: var(--amber-base) !important;
+}
+.workspace-tab-header-inner-icon {
+  color: var(--icon-color-normal) !important;
+}
+
+/* Status Bar */
+.status-bar {
+  background-color: var(--status-bar-background) !important;
+  color: var(--text-muted) !important;
+}
+.mod-clickable.status-bar-item:hover {
+    background-color: var(--interactive-hover) !important; /* Use the button hover color for status bar item hover */
+}
+/* ----------------------------
+   FILE EXPLORER & NAVIGATION
+   ---------------------------- */
+.nav-file-title, .nav-folder-title {
+  color: var(--nav-item-color) !important;
+}
+.nav-file-title:hover, .nav-folder-title:hover {
+  background-color: var(--nav-item-color-background-hover);
+  color: var(--nav-item-color-hover) !important;
+}
+.nav-file-title.is-active, .nav-folder-title.is-active {
+  color: var(--nav-item-color-active) !important;
+  background-color: rgba(109, 65, 35, 0.25);
+}
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--text-active);
+  border-bottom: 2px solid var(--interactive-accent);
+}
+
+/* ----------------------------
+   NOTE CONTENT AREA
+   ---------------------------- */
+/* Base Views */
+.markdown-source-view, 
+.markdown-preview-view,
+.cm-s-obsidian {
+  color: var(--text-normal) !important;
+  background-color: var(--background-primary) !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6,
+.cm-header-1, .cm-header-2, .cm-header-3, 
+.cm-header-4, .cm-header-5, .cm-header-6 {
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/* Emphasis */
+strong, .cm-strong { font-weight: 700; color: var(--text-normal); }
+em, .cm-em { font-style: italic; }
+mark, .cm-highlight {
+  background-color: var(--text-highlight-bg) !important;
+  color: var(--text-normal) !important;
+}
+del, .cm-strikethrough { 
+  text-decoration-color: var(--text-faint);
+  opacity: 0.85;
+}
+
+/* Links */
+a.internal-link, 
+a.external-link,
+.cm-hmd-internal-link {
+  color: var(--text-accent) !important;
+}
+a.internal-link:hover,
+a.external-link:hover {
+  color: var(--text-accent-hover) !important;
+}
+a.internal-link.is-unresolved {
+  color: var(--text-faint) !important;
+  opacity: 0.7;
+}
+
+/* Code */
+code, .cm-inline-code {
+  background-color: var(--background-modifier-form-field);
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+}
+pre, .HyperMD-codeblock {
+  background-color: var(--background-secondary-alt) !important;
+  border-left: 3px solid var(--amber-border);
+  padding: 1em !important;
+}
+
+/* Blockquotes & Tables */
+blockquote, .HyperMD-quote {
+  border-left: 3px solid var(--amber-border);
+  background-color: var(--background-modifier-hover);
+  color: var(--text-muted);
+}
+table {
+  border-color: var(--background-modifier-border) !important;
+}
+th, td {
+  border-color: var(--background-modifier-border) !important;
+  color: var(--text-normal);
+}
+
+/* Lists & Checkboxes */
+li.task-list-item {
+  margin-block: 0.25em;
+}
+input[type="checkbox"] {
+  border-color: var(--amber-border) !important;
+  background-color: var(--background-secondary) !important;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--amber-base) !important;
+  accent-color: var(--background-primary);
+}
+
+/* Frontmatter */
+.frontmatter-container, 
+.cm-hmd-frontmatter {
+  background-color: var(--metadata-label-background);
+  border-bottom: 1px dashed var(--background-modifier-border);
+  color: var(--metadata-label-text-color);
+}
+.frontmatter-container .frontmatter-alias {
+  color: var(--amber-base);
+}
+
+/* Embeds */
+.markdown-embed, .file-embed {
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary-alt);
+}
+.markdown-embed-title, .file-embed-title {
+  border-bottom: 1px solid var(--background-modifier-border);
+  color: var(--text-active);
+}
+.markdown-embed-link, .file-embed-link {
+  color: var(--text-accent);
+}
+
+/* Tags */
+a.tag, .cm-hashtag {
+  background-color: var(--background-modifier-hover);
+  color: var(--amber-base) !important;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+/* ----------------------------
+   UI COMPONENTS
+   ---------------------------- */
+/* Buttons */
+button:not(.mod-cta, .mod-warning) {
+  background-color: var(--interactive-normal);
+  color: var(--text-on-accent);
+  border-color: var(--background-modifier-border);
+}
+button:hover:not(.mod-cta, .mod-warning) {
+  background-color: var(--interactive-hover);
+  color: var(--text-on-accent);
+}
+button.mod-cta {
+  background-color: var(--amber-hover);
+  color: var(--text-on-accent);
+}
+button.mod-warning {
+  background-color: #c44536;
+  color: white;
+}
+
+/* Form Elements */
+input, textarea, .dropdown {
+  background-color: var(--background-modifier-form-field) !important;
+  border-color: var(--background-modifier-border) !important;
+  color: var(--text-normal) !important;
+}
+input:focus, textarea:focus {
+  border-color: var(--background-modifier-border-focus) !important;
+  box-shadow: 0 0 0 2px rgba(209, 158, 121, 0.3);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  background-color: var(--scrollbar-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-active-thumb-bg);
+}
+
+/* ----------------------------
+   SPECIAL VIEWS
+   ---------------------------- */
+/* Graph View */
+.graph-view.color-fill { color: var(--text-muted); }
+.graph-view.color-fill-focused { color: #ffcc00; }
+.graph-view.color-fill-tag { color: #a87c5e; }
+.graph-view.color-fill-attachment { color: #4a7ba7; }
+.graph-view.color-fill-unresolved { 
+  color: var(--text-faint); 
+  opacity: 0.6; 
+}
+.graph-view.color-arrow, 
+.graph-view.color-line { 
+  color: var(--background-modifier-border); 
+  opacity: 0.7; 
+}
+.graph-view.color-circle, 
+.graph-view.color-text { color: var(--text-normal); }
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight { 
+  color: var(--interactive-accent); 
+  opacity: 1; 
+}
+
+/* ----------------------------
+   CURSOR & ANIMATIONS
+   ---------------------------- */
+.cm-cursorLayer .cm-cursor {
+  border-left: 1.2px solid var(--amber-base);
+  margin-left: -0.6px;
+}
+.cm-cursorLayer {
+  animation-name: none !important;
+}
+@keyframes phase-blink {
+  15% { opacity: 1; }
+  50% { opacity: 0.2; }
+  85% { opacity: 1; }
+}
+.cm-cursorLayer .cm-cursor {
+  animation: phase-blink 2200ms steps(1) infinite;
+}
+
+/* ----------------------------
+   UTILITY OVERRIDES
+   ---------------------------- */
+/* Ensure vault name color consistency */
+.workspace-ribbon .workspace-ribbon-collapse-btn,
+.workspace-ribbon .workspace-ribbon-pin-btn {
+  color: var(--amber-base) !important;
+}
+
+/* Fix sidebar plugin text contrast */
+.mod-split .nav-file-title-content,
+.mod-split .nav-folder-title-content {
+  --text-normal: var(--text-muted);
+}
