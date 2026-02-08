@@ -61,7 +61,7 @@
   --text-on-accent-inverted: var(--amber-border);
   
   /* Links & Accents */
-  --text-accent: var(--amber-border);
+  --text-accent: var(--amber-base);
   --text-accent-hover: var(--amber-base);
   
   /* Interactive Elements */
@@ -80,7 +80,7 @@
   --nav-item-color-hover: var(--amber-hover);
   --nav-item-color-active: var(--amber-active);
   --nav-item-color-background-hover: rgba(209, 158, 121, 0.15);
-  --toggle-thumb-color: var(--amber-border);
+  --toggle-thumb-color: var(--amber-base);
   --dropdown-background: var(--background-secondary);
   --status-bar-background: var(--background-secondary-alt);
   --search-icon-color: var(--amber-base);
