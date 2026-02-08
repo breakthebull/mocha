@@ -4,7 +4,7 @@
 
 *Where every note feels like a quiet moment with your favorite cup.*
 
-Inspired by Mocha Palette by Space Sandwhich 
+Inspired by Mocha Palette by Space Sandwhich - [!Lospec Mocha Palette](https://lospec.com/palette-list/mocha)
 ![Mocha Palette by Space Sandwhich](https://github.com/breakthebull/mocha/blob/main/mocha%20palette.png)
 mocha palette.png
 
