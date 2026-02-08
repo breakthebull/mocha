@@ -24,7 +24,7 @@ mocha palette.png
 - Subtle visual cues for links, tags, and highlights—noticed but never noisy
 - Monospace code blocks with warm syntax backgrounds (no jarring white-on-black)
 
-###🧘 Calm Navigation
+### 🧘 Calm Navigation
 - Sidebar items fade gently on hover—no aggressive color jumps
 - Active note title glows with soft amber underline (know where you are without distraction)
 - Status bar transforms on hover: text brightens, background deepens—satisfying micro-interactions
