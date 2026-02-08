@@ -49,7 +49,7 @@ mocha palette.png
 
 ### Deep canvas for notes—like dark roast beans
 
--Steamed Milk #e8d9c9
+- Steamed Milk #e8d9c9
 
 ###Readable text—warm, never harsh
 
