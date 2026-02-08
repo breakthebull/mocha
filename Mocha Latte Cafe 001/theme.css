@@ -61,7 +61,7 @@
   --text-on-accent-inverted: var(--amber-border);
   
   /* Links & Accents */
-  --text-accent: var(--amber-border);
+  --text-accent: var(--amber-base);
   --text-accent-hover: var(--amber-base);
   
   /* Interactive Elements */
