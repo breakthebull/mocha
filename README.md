@@ -1,4 +1,4 @@
-# mocha
+# Mocha Latte Cafe 001
 
 ## ☕ Mocha — A Warm, Soulful Obsidian Theme
 
