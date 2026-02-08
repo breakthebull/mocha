@@ -59,12 +59,11 @@ Borders & subtle structure—like spice notes
 
 *No rainbow vomit. No visual noise. Just warmth that serves your focus.*
 
-### ⚡ Quick Start
+### ⚡ Quick Start Installation
 - Install via Obsidian → Settings → Appearance → Community Themes → Browse (search "Mocha")
-Or manually:
-- Create Mocha.css in YourVault/.obsidian/themes/
-- Paste the full CSS
-- Enable in Settings → Appearance → Theme
+
+**Or manually:**
+- Download the Mocha Latte Cafe 001 folder into your .obsidian --> themes folder and then load from the app.
 
 ### 🔧 Customize Your Brew
 Love sage instead of amber? Change one line to transform your entire workspace:
