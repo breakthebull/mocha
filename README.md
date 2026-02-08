@@ -88,3 +88,6 @@ Your eyes deserve kindness. We built that in.
 ![Mocha Light Settings](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-light-settings.PNG)
 ![Mocha Dark Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark-community.PNG)
 ![Mocha Light Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-light-community.PNG)
+
+Feel free to support me here: [![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/drasmussen93)
+
