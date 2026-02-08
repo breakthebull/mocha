@@ -3,7 +3,7 @@
 ☕ Mocha — A Warm, Soulful Obsidian Theme
 Where every note feels like a quiet moment with your favorite cup.
 
-Inspired by Mocha Palette by Space Sandwhich
+Inspired by ![Mocha Palette by Space Sandwhich](https://github.com/breakthebull/mocha/blob/main/mocha%20palette.png)
 mocha palette.png
 
 Soft amber accents • Thoughtful contrast • Calm productivity
@@ -82,9 +82,9 @@ Mocha was stress-tested for real-world use:
 ✅ Tested with color blindness simulators (Deuteranopia/Tritanopia)
 Your eyes deserve kindness. We built that in.
 
-screenshot-mocha-dark.png
-screenshot-moch-light.png
-screenshot-mocha-dark-settings.png
-screenshot-mocha-light-settings.png
-screenshot-mocha-dark-community.png
-screenshot-mocha-light-community.png
+![Mocha Dark](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark.PNG)
+![Mocha Light](https://github.com/breakthebull/mocha/blob/main/screenshot-moch-light.PNG)
+![Mocha Dark Settings](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark-settings.PNG)
+![Mocha Light Settings](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-light-settings.PNG)
+![Mocha Dark Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark-community.PNG)
+![Mocha Light Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-light-community.PNG)
