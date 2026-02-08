@@ -51,7 +51,7 @@ mocha palette.png
 
 - Steamed Milk #e8d9c9
 
-###Readable text—warm, never harsh
+### Readable text—warm, never harsh
 
 - Cinnamon Edge #4c2c21
 
