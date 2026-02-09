@@ -29,19 +29,21 @@ mocha palette.png
 - Active note title glows with soft amber underline (know where you are without distraction)
 - Status bar transforms on hover: text brightens, background deepens—satisfying micro-interactions
 
-### 🛠️ Built for Real Humans
+### 🛠️ Built with Simplicity
 - One-variable customization: Change --amber-base to shift your entire theme's mood
 - Light/dark mode harmony: Both modes share the same soul—no jarring transitions
 - Plugin-ready: Graph view, calendar, dataview—all styled to blend seamlessly
 - Zero empty rules: Clean, commented CSS you can actually understand and tweak
 
-🎨 The Mocha Palette Philosophy
 
-### Name | Color | Purpose
-Amber Glow | #d19e79 | Your anchor—links, highlights, active states
-Roasted Base | #20130e | Deep canvas for notes—like dark roast beans
-Steamed Milk | #e8d9c9 | Readable text—warm, never harsh
-Cinnamon Edge | #4c2c21 | Borders & subtle structure—like spice notes
++---------------+---------+---------------------------------------------+
+| Name          | Color   | Purpose                                     |
++---------------+---------+---------------------------------------------+
+| Amber Glow    | #d19e79 | Your anchor—links, highlights, active states|
+| Roasted Base  | #20130e | Deep canvas for notes—like dark roast beans |
+| Steamed Milk  | #e8d9c9 | Readable text—warm, never harsh             |
+| Cinnamon Edge | #4c2c21 | Borders & subtle structure—like spice notes |
++---------------+---------+---------------------------------------------+
 
 ### ⚡ Quick Start Installation
 - Install via Obsidian → Settings → Appearance → Community Themes → Browse (search "Mocha")
