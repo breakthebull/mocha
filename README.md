@@ -1,5 +1,13 @@
 # Mocha Latte Cafe 001
 
+---
+
+![Version](https://img.shields.io/badge/version-002-darkred)
+![License](https://img.shields.io/badge/license-CC0--1.0-lightgrey)
+![Obsidian](https://img.shields.io/badge/obsidian-compatible-blue)
+
+---
+
 ## ☕ Mocha — A Warm, Soulful Obsidian Theme
 
 *Where every note feels like a quiet moment with your favorite cup.*
