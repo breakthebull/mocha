@@ -37,27 +37,11 @@ mocha palette.png
 
 🎨 The Mocha Palette Philosophy
 
-### Role
-### Color
-### Purpose
-
-- Amber Glow #d19e79
-
-### Your anchor—links, highlights, active states
-
-- Roasted Base #20130e
-
-### Deep canvas for notes—like dark roast beans
-
-- Steamed Milk #e8d9c9
-
-### Readable text—warm, never harsh
-
-- Cinnamon Edge #4c2c21
-
-Borders & subtle structure—like spice notes
-
-*No rainbow vomit. No visual noise. Just warmth that serves your focus.*
+### Name | Color | Purpose
+Amber Glow | #d19e79 | Your anchor—links, highlights, active states
+Roasted Base | #20130e | Deep canvas for notes—like dark roast beans
+Steamed Milk | #e8d9c9 | Readable text—warm, never harsh
+Cinnamon Edge | #4c2c21 | Borders & subtle structure—like spice notes
 
 ### ⚡ Quick Start Installation
 - Install via Obsidian → Settings → Appearance → Community Themes → Browse (search "Mocha")
@@ -65,20 +49,12 @@ Borders & subtle structure—like spice notes
 **Or manually:**
 - Download the Mocha Latte Cafe 001 folder into your .obsidian --> themes folder and then load from the app.
 
-### 🔧 Customize Your Brew
-Love sage instead of amber? Change one line to transform your entire workspace:
-
-- /* In .theme-dark section */--amber-base: #7a9e7e;
-- /* Your new accent */--amber-hover: #628462;
-- /* Auto-darken 15% */--amber-active: #e8f0e8;
-- /* Auto-lighten 30% */
-
-**→ Save → Watch links, highlights, vault name, and buttons harmonize instantly.**
-
 [!Pro tip:] 
 Use Coolors.co to generate a 3-color palette (1 accent + 2 neutrals), then map to our variables.
 
 ## Your eyes deserve kindness
+
+--- 
 
 ![Mocha Dark](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark.PNG)
 ![Mocha Light](https://github.com/breakthebull/mocha/blob/main/screenshot-moch-light.PNG)
