@@ -78,15 +78,6 @@ Love sage instead of amber? Change one line to transform your entire workspace:
 [!Pro tip:] 
 Use Coolors.co to generate a 3-color palette (1 accent + 2 neutrals), then map to our variables.
 
-### ♿ Accessibility Commitment
-
-**Mocha was stress-tested for real-world use:**
-
-- ✅ Body text contrast: 7.2:1 (exceeds WCAG AA's 4.5:1 minimum)
-- ✅ Link/text differentiation without color alone (underlines + hue shift)
-- ✅ Reduced motion: no distracting animations
-- ✅ Tested with color blindness simulators (Deuteranopia/Tritanopia)
-
 ## Your eyes deserve kindness
 
 ![Mocha Dark](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark.PNG)
