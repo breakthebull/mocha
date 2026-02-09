@@ -209,6 +209,31 @@ settings:
   /* ... rest of your variables ... */
 }
 
+/* ========================================
+   TRANSLUCENT MODALS - Works in Both Modes
+   ======================================== */
+
+/* Dark Mode */
+body.mocha-translucent-modals.theme-dark .modal,
+body.mocha-translucent-modals.theme-dark .prompt,
+body.mocha-translucent-modals.theme-dark .menu {
+  background-color: rgba(30, 20, 15, 0.92) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  color: var(--text-normal) !important;
+}
+
+/* Light Mode - Lighter, more readable */
+body.mocha-translucent-modals.theme-light .modal,
+body.mocha-translucent-modals.theme-light .prompt,
+body.mocha-translucent-modals.theme-light .menu {
+  background-color: rgba(240, 217, 173, 0.89) !important; /* Light cream */
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  color: var(--text-normal) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
 /* ----------------------------
    THEME VARIABLES (DARK MODE)
    ---------------------------- */
