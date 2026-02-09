@@ -217,21 +217,21 @@ settings:
 body.mocha-translucent-modals.theme-dark .modal,
 body.mocha-translucent-modals.theme-dark .prompt,
 body.mocha-translucent-modals.theme-dark .menu {
-  background-color: rgba(30, 20, 15, 0.92) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid var(--background-modifier-border) !important;
-  color: var(--text-normal) !important;
+  background-color: rgba(30, 20, 15, 0.92) ;
+  backdrop-filter: blur(10px) ;
+  border: 1px solid var(--background-modifier-border) ;
+  color: var(--text-normal) ;
 }
 
 /* Light Mode - Lighter, more readable */
 body.mocha-translucent-modals.theme-light .modal,
 body.mocha-translucent-modals.theme-light .prompt,
 body.mocha-translucent-modals.theme-light .menu {
-  background-color: rgba(240, 217, 173, 0.89) !important; /* Light cream */
-  backdrop-filter: blur(8px) !important;
-  border: 1px solid var(--background-modifier-border) !important;
-  color: var(--text-normal) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  background-color: rgba(240, 217, 173, 0.89) ; /* Light cream */
+  backdrop-filter: blur(8px) ;
+  border: 1px solid var(--background-modifier-border) ;
+  color: var(--text-normal) ;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) ;
 }
 
 /* ----------------------------
@@ -678,34 +678,34 @@ input:focus, textarea:focus {
 
 /* 🌿 Sage Green Preset */
 body.mocha-sage {
-  --amber-base: #7a9e7e !important;
-  --amber-hover: #628462 !important;
-  --amber-active: #e8f0e8 !important;
-  --amber-border: #4a6b4a !important;
+  --amber-base: #7a9e7e ;
+  --amber-hover: #628462 ;
+  --amber-active: #e8f0e8 ;
+  --amber-border: #4a6b4a ;
 }
 
 /* 🫐 Deep Blue Preset */
 body.mocha-blue {
-  --amber-base: #6b8ba4 !important;
-  --amber-hover: #516d82 !important;
-  --amber-active: #e6edf3 !important;
-  --amber-border: #3d5466 !important;
+  --amber-base: #6b8ba4 ;
+  --amber-hover: #516d82 ;
+  --amber-active: #e6edf3 ;
+  --amber-border: #3d5466 ;
 }
 
 /* 🍇 Rich Purple Preset */
 body.mocha-purple {
-  --amber-base: #9a7ba1 !important;
-  --amber-hover: #7d5f85 !important;
-  --amber-active: #f0e9f2 !important;
-  --amber-border: #5e4563 !important;
+  --amber-base: #9a7ba1 ;
+  --amber-hover: #7d5f85 ;
+  --amber-active: #f0e9f2 ;
+  --amber-border: #5e4563 ;
 }
 
 /* 🧡 Warm Terracotta Preset */
 body.mocha-terracotta {
-  --amber-base: #c77966 !important;
-  --amber-hover: #a45d4a !important;
-  --amber-active: #f8e9e5 !important;
-  --amber-border: #7a4436 !important;
+  --amber-base: #c77966 ;
+  --amber-hover: #a45d4a ;
+  --amber-active: #f8e9e5 ;
+  --amber-border: #7a4436 ;
 }
 
 /* ========================================
@@ -724,12 +724,51 @@ body.mocha-rounded-corners {
 body.mocha-translucent-modals .modal,
 body.mocha-translucent-modals .prompt,
 body.mocha-translucent-modals .menu {
-  background-color: rgba(30, 20, 15, 0.92) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid var(--background-modifier-border) !important;
+  background-color: rgba(30, 20, 15, 0.92) ;
+  backdrop-filter: blur(10px) ;
+  border: 1px solid var(--background-modifier-border) ;
 }
 
 /* Hide Status Bar Toggle */
 body.mocha-hide-status-bar .status-bar {
-  display: none !important;
+  display: none ;
+}
+
+/* ========================================
+BANNER PLUGIN SUPPORT
+Fix for pixel/banner images being covered
+======================================== */
+
+/* Make banner wrapper transparent */
+.obsidian-banner-wrapper,
+.obsidian-banner,
+.obsidian-banner-wrapper .obsidian-banner {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Ensure banner image displays properly */
+.obsidian-banner-wrapper .obsidian-banner .banner-image {
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    z-index: 10 !important;
+}
+
+/* Adjust frontmatter spacing when banner is present */
+.obsidian-banner-wrapper .frontmatter-container {
+    margin-top: 20px !important;
+    background-color: transparent !important;
+}
+
+/* Ensure banner sits above other elements */
+.obsidian-banner-wrapper {
+    position: relative !important;
+}
+
+/* For other banner plugins (Obsidian Banners, Header Image, etc.) */
+.header-image,
+.header-image-wrapper,
+.frontmatter-container .banner {
+    background-color: transparent !important;
+    background-image: none !important;
 }
