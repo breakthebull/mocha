@@ -58,6 +58,8 @@ Use Coolors.co to generate a 3-color palette (1 accent + 2 neutrals), then map t
 
 --- 
 
+![Styles Settings Plugin](https://github.com/breakthebull/mocha/blob/main/mocha-settings-toggle.PNG)
+
 ![Mocha Dark](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark.PNG)
 ![Mocha Light](https://github.com/breakthebull/mocha/blob/main/screenshot-moch-light.PNG)
 
