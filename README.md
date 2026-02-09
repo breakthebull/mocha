@@ -69,5 +69,9 @@ Use Coolors.co to generate a 3-color palette (1 accent + 2 neutrals), then map t
 ![Mocha Dark Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-dark-community.PNG)
 ![Mocha Light Community](https://github.com/breakthebull/mocha/blob/main/screenshot-mocha-light-community.PNG)
 
-Feel free to support me here: [![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/drasmussen93)
+![Mocha Dark Translucent Toggle](https://github.com/breakthebull/mocha/blob/main/mocha-settings-translucent-dark.PNG)
+![Mocha Light Translucent Toggle](https://github.com/breakthebull/mocha/blob/main/mocha-settings-translucent-light.PNG)
+
+Feel free to support me here: 
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/drasmussen93)
 
