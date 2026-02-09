@@ -7,6 +7,169 @@
 /* ----------------------------
    GLOBAL RESETS & FOUNDATIONS
    ---------------------------- */
+
+/* @settings
+name: ☕ Mocha Latte Cafe
+id: mocha-latte-cafe
+settings:
+  -
+    id: mocha-colors-header
+    title: 🎨 Colors
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: amber-base
+    title: Primary Accent Color
+    description: Main amber glow for links, highlights, and active states
+    type: variable-color
+    format: hex
+    default: '#d19e79'
+  -
+    id: amber-hover
+    title: Hover Accent Color
+    description: Color when hovering over interactive elements
+    type: variable-color
+    format: hex
+    default: '#ab6c46'
+  -
+    id: amber-active
+    title: Active State Color
+    description: Color for currently selected items
+    type: variable-color
+    format: hex
+    default: '#fff0ea'
+  -
+    id: amber-border
+    title: Border & Subtle Accent
+    description: Borders, dividers, and subtle highlights
+    type: variable-color
+    format: hex
+    default: '#4c2c21'
+  -
+    id: background-primary
+    title: Note Canvas Background
+    description: Main background where you write
+    type: variable-color
+    format: hex
+    default: '#4c2c21'
+  -
+    id: background-secondary
+    title: Sidebar Background
+    description: File explorer and side panels
+    type: variable-color
+    format: hex
+    default: '#1a0f0a'
+  -
+    id: text-normal
+    title: Body Text Color
+    description: Main readable text color
+    type: variable-color
+    format: hex
+    default: '#e8d9c9'
+  -
+    id: mocha-fonts-header
+    title: ✍️ Typography
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: font-size-normal
+    title: Base Font Size
+    description: Main text size (Ctrl+Scroll still works)
+    type: variable-number-slider
+    default: 16
+    min: 12
+    max: 24
+    step: 0.5
+    format: px
+  -
+    id: font-size-code
+    title: Code Font Size
+    type: variable-number-slider
+    default: 15
+    min: 10
+    max: 20
+    step: 0.5
+    format: px
+  -
+    id: line-height-normal
+    title: Line Height
+    description: Spacing between lines (1.5 = 150%)
+    type: variable-number-slider
+    default: 1.5
+    min: 1.0
+    max: 2.5
+    step: 0.1
+    format: ''
+  -
+    id: mocha-visual-header
+    title: 🎭 Visual Tweaks
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: mocha-rounded-corners
+    title: Rounded Corners
+    description: Soften edges on cards, buttons, and modals
+    type: class-toggle
+    default: true
+  -
+    id: mocha-translucent-modals
+    title: Translucent Modals
+    description: Semi-transparent settings windows
+    type: class-toggle
+    default: false
+  -
+    id: mocha-hide-status-bar
+    title: Hide Status Bar
+    description: Clean minimalist look
+    type: class-toggle
+    default: false
+  -
+    id: mocha-accent-header
+    title: 🔧 Accent Presets
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: mocha-accent-preset
+    title: Quick Accent Preset
+    description: Instantly change the theme's mood
+    type: class-select
+    allowEmpty: true
+    default: none
+    options:
+      - label: 'None (Custom)'
+        value: 'none'
+      - label: '🌿 Sage Green'
+        value: 'mocha-sage'
+      - label: '🫐 Deep Blue'
+        value: 'mocha-blue'
+      - label: '🍇 Rich Purple'
+        value: 'mocha-purple'
+      - label: '🧡 Warm Terracotta'
+        value: 'mocha-terracotta'
+  -
+    id: mocha-about-header
+    title: ℹ️ About Mocha Latte Cafe
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: mocha-theme-author
+    title: 'Created by: DA Rasmussen'
+    description: '☕ A warm, soulful theme for deep focus'
+    type: info-text
+  -
+    id: mocha-theme-license
+    title: 'License: CC0-1.0'
+    description: 'Free to use, modify, and share'
+    type: info-text
+*/
+
+
+
 *,
 *::before,
 *::after {
@@ -14,9 +177,36 @@
 }
 
 :root {
-  /* Font Stack - Fallbacks included */
-  --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-monospace: "Source Code Pro", "Fira Code", "JetBrains Mono", Consolas, monospace;
+  /* Font Stack */
+  --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
+  
+  /* Typography from Style Settings */
+  --font-size-normal: 16px;    /* Will be overridden by Style Settings */
+  --font-size-code: 15px;      /* Will be overridden by Style Settings */
+  --line-height-normal: 1.5;   /* Will be overridden by Style Settings */
+}
+
+.theme-dark {
+  /* Core Palette - NOW LINKED TO STYLE SETTINGS */
+  --amber-base: #d19e79;        /* Style Settings will override this */
+  --amber-hover: #ab6c46;       /* Style Settings will override this */
+  --amber-active: #fff0ea;      /* Style Settings will override this */
+  --amber-border: #4c2c21;      /* Style Settings will override this */
+  
+  /* Backgrounds */
+  --background-primary: #4c2c21;      /* Style Settings will override this */
+  --background-primary-alt: #2a1a12;
+  --background-secondary: #1a0f0a;    /* Style Settings will override this */
+  --background-secondary-alt: #25160f;
+  --background-accent: var(--amber-base);
+  
+  /* Text Colors */
+  --text-normal: #e8d9c9;       /* Style Settings will override this */
+  --text-muted: #b89a80;
+  --text-faint: #8a6d55;
+  
+  /* ... rest of your variables ... */
 }
 
 /* ----------------------------
@@ -72,7 +262,7 @@
   
   /* UI Components */
   --scrollbar-bg: #150c07;
-  --scrollbar-thumb-bg: rgba(85, 50, 30, 0.6);
+  --scrollbar-thumb-bg: rgba(172, 107, 70, 0.6);
   --scrollbar-active-thumb-bg: var(--amber-border);
   --icon-color-normal: var(--amber-base);
   --icon-color-hover: var(--amber-active);
@@ -185,50 +375,50 @@
 /* Title Bar */
 .titlebar-text, 
 .titlebar-button.mod-logo {
-  color: var(--amber-base) !important;
-  opacity: 1 !important;
+  color: var(--amber-base);
+  opacity: 1;
 }
-.titlebar-button { color: var(--icon-color-normal) !important; }
+.titlebar-button { color: var(--icon-color-normal); }
 
 /* Ribbons */
 .workspace-ribbon {
   background-color: var(--background-secondary);
-  color: var(--amber-border) !important;
+  color: var(--amber-border);
 }
 
 /* Side Panels */
 .mod-right-split {
-  background-color: var(--background-secondary) !important;
-  border-left: 1px solid var(--background-modifier-border) !important;
+  background-color: var(--background-secondary);
+  border-left: 1px solid var(--background-modifier-border);
 }
 .workspace-tabs {
   border-bottom: 1px solid var(--amber-base);
-  color: var(--amber-base) !important;
+  color: var(--amber-base);
 }
 .workspace-tab-header-inner-icon {
-  color: var(--icon-color-normal) !important;
+  color: var(--icon-color-normal);
 }
 
 /* Status Bar */
 .status-bar {
-  background-color: var(--status-bar-background) !important;
-  color: var(--text-muted) !important;
+  background-color: var(--status-bar-background);
+  color: var(--text-muted);
 }
 .mod-clickable.status-bar-item:hover {
-    background-color: var(--interactive-hover) !important; /* Use the button hover color for status bar item hover */
+    background-color: var(--interactive-hover); /* Use the button hover color for status bar item hover */
 }
 /* ----------------------------
    FILE EXPLORER & NAVIGATION
    ---------------------------- */
 .nav-file-title, .nav-folder-title {
-  color: var(--nav-item-color) !important;
+  color: var(--nav-item-color);
 }
 .nav-file-title:hover, .nav-folder-title:hover {
   background-color: var(--nav-item-color-background-hover);
-  color: var(--nav-item-color-hover) !important;
+  color: var(--nav-item-color-hover);
 }
 .nav-file-title.is-active, .nav-folder-title.is-active {
-  color: var(--nav-item-color-active) !important;
+  color: var(--nav-item-color-active);
   background-color: rgba(109, 65, 35, 0.25);
 }
 .workspace-leaf.mod-active .view-header-title {
@@ -243,8 +433,8 @@
 .markdown-source-view, 
 .markdown-preview-view,
 .cm-s-obsidian {
-  color: var(--text-normal) !important;
-  background-color: var(--background-primary) !important;
+  color: var(--text-normal);
+  background-color: var(--background-primary);
 }
 
 /* Headers */
@@ -259,8 +449,8 @@ h1, h2, h3, h4, h5, h6,
 strong, .cm-strong { font-weight: 700; color: var(--text-normal); }
 em, .cm-em { font-style: italic; }
 mark, .cm-highlight {
-  background-color: var(--text-highlight-bg) !important;
-  color: var(--text-normal) !important;
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
 }
 del, .cm-strikethrough { 
   text-decoration-color: var(--text-faint);
@@ -271,14 +461,14 @@ del, .cm-strikethrough {
 a.internal-link, 
 a.external-link,
 .cm-hmd-internal-link {
-  color: var(--text-accent) !important;
+  color: var(--text-accent);
 }
 a.internal-link:hover,
 a.external-link:hover {
-  color: var(--text-accent-hover) !important;
+  color: var(--text-accent-hover);
 }
 a.internal-link.is-unresolved {
-  color: var(--text-faint) !important;
+  color: var(--text-faint);
   opacity: 0.7;
 }
 
@@ -289,9 +479,9 @@ code, .cm-inline-code {
   font-family: var(--font-monospace);
 }
 pre, .HyperMD-codeblock {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--background-secondary-alt);
   border-left: 3px solid var(--amber-border);
-  padding: 1em !important;
+  padding: 1em ;
 }
 
 /* Blockquotes & Tables */
@@ -301,10 +491,10 @@ blockquote, .HyperMD-quote {
   color: var(--text-muted);
 }
 table {
-  border-color: var(--background-modifier-border) !important;
+  border-color: var(--background-modifier-border);
 }
 th, td {
-  border-color: var(--background-modifier-border) !important;
+  border-color: var(--background-modifier-border);
   color: var(--text-normal);
 }
 
@@ -313,11 +503,11 @@ li.task-list-item {
   margin-block: 0.25em;
 }
 input[type="checkbox"] {
-  border-color: var(--amber-border) !important;
-  background-color: var(--background-secondary) !important;
+  border-color: var(--amber-border);
+  background-color: var(--background-secondary);
 }
 input[type="checkbox"]:checked {
-  background-color: var(--amber-base) !important;
+  background-color: var(--amber-base);
   accent-color: var(--background-primary);
 }
 
@@ -348,7 +538,7 @@ input[type="checkbox"]:checked {
 /* Tags */
 a.tag, .cm-hashtag {
   background-color: var(--background-modifier-hover);
-  color: var(--amber-base) !important;
+  color: var(--amber-base);
   padding: 0.15em 0.4em;
   border-radius: 4px;
 }
@@ -377,12 +567,12 @@ button.mod-warning {
 
 /* Form Elements */
 input, textarea, .dropdown {
-  background-color: var(--background-modifier-form-field) !important;
-  border-color: var(--background-modifier-border) !important;
-  color: var(--text-normal) !important;
+  background-color: var(--background-modifier-form-field);
+  border-color: var(--background-modifier-border);
+  color: var(--text-normal);
 }
 input:focus, textarea:focus {
-  border-color: var(--background-modifier-border-focus) !important;
+  border-color: var(--background-modifier-border-focus);
   box-shadow: 0 0 0 2px rgba(209, 158, 121, 0.3);
 }
 
@@ -431,7 +621,7 @@ input:focus, textarea:focus {
   margin-left: -0.6px;
 }
 .cm-cursorLayer {
-  animation-name: none !important;
+  animation-name: none ;
 }
 @keyframes phase-blink {
   15% { opacity: 1; }
@@ -448,11 +638,73 @@ input:focus, textarea:focus {
 /* Ensure vault name color consistency */
 .workspace-ribbon .workspace-ribbon-collapse-btn,
 .workspace-ribbon .workspace-ribbon-pin-btn {
-  color: var(--amber-base) !important;
+  color: var(--amber-base) ;
 }
 
 /* Fix sidebar plugin text contrast */
 .mod-split .nav-file-title-content,
 .mod-split .nav-folder-title-content {
   --text-normal: var(--text-muted);
+}
+
+/* ========================================
+   ACCENT PRESETS - Quick Theme Variations
+   ======================================== */
+
+/* 🌿 Sage Green Preset */
+body.mocha-sage {
+  --amber-base: #7a9e7e !important;
+  --amber-hover: #628462 !important;
+  --amber-active: #e8f0e8 !important;
+  --amber-border: #4a6b4a !important;
+}
+
+/* 🫐 Deep Blue Preset */
+body.mocha-blue {
+  --amber-base: #6b8ba4 !important;
+  --amber-hover: #516d82 !important;
+  --amber-active: #e6edf3 !important;
+  --amber-border: #3d5466 !important;
+}
+
+/* 🍇 Rich Purple Preset */
+body.mocha-purple {
+  --amber-base: #9a7ba1 !important;
+  --amber-hover: #7d5f85 !important;
+  --amber-active: #f0e9f2 !important;
+  --amber-border: #5e4563 !important;
+}
+
+/* 🧡 Warm Terracotta Preset */
+body.mocha-terracotta {
+  --amber-base: #c77966 !important;
+  --amber-hover: #a45d4a !important;
+  --amber-active: #f8e9e5 !important;
+  --amber-border: #7a4436 !important;
+}
+
+/* ========================================
+   VISUAL TOGGLES
+   ======================================== */
+
+/* Rounded Corners Toggle */
+body.mocha-rounded-corners {
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --radius-xl: 18px;
+}
+
+/* Translucent Modals Toggle */
+body.mocha-translucent-modals .modal,
+body.mocha-translucent-modals .prompt,
+body.mocha-translucent-modals .menu {
+  background-color: rgba(30, 20, 15, 0.92) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+}
+
+/* Hide Status Bar Toggle */
+body.mocha-hide-status-bar .status-bar {
+  display: none !important;
 }
