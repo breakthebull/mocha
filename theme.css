@@ -119,7 +119,7 @@ settings:
     title: Translucent Modals
     description: Semi-transparent settings windows
     type: class-toggle
-    default: false
+    default: true
   -
     id: mocha-hide-status-bar
     title: Hide Status Bar
@@ -138,7 +138,7 @@ settings:
     description: Instantly change the theme's mood
     type: class-select
     allowEmpty: true
-    default: none
+    default: mocha-terracotta
     options:
       - label: 'None (Custom)'
         value: 'none'
@@ -375,7 +375,7 @@ body.mocha-translucent-modals.theme-light .menu {
 /* Modals & Overlays */
 .modal, .prompt, .menu, .tooltip {
   background-color: var(--background-primary);
-  border-color: var(--background-modifier-border);
+  border-color: var(--background-modifier-border-hover);
   color: var(--text-normal);
 }
 .tooltip {
@@ -720,15 +720,6 @@ body.mocha-rounded-corners {
   --radius-xl: 18px;
 }
 
-/* Translucent Modals Toggle */
-body.mocha-translucent-modals .modal,
-body.mocha-translucent-modals .prompt,
-body.mocha-translucent-modals .menu {
-  background-color: rgba(30, 20, 15, 0.92) ;
-  backdrop-filter: blur(10px) ;
-  border: 1px solid var(--background-modifier-border) ;
-}
-
 /* Hide Status Bar Toggle */
 body.mocha-hide-status-bar .status-bar {
   display: none ;
@@ -743,32 +734,32 @@ Fix for pixel/banner images being covered
 .obsidian-banner-wrapper,
 .obsidian-banner,
 .obsidian-banner-wrapper .obsidian-banner {
-    background-color: transparent !important;
-    background-image: none !important;
+    background-color: transparent ;
+    background-image: none ;
 }
 
 /* Ensure banner image displays properly */
 .obsidian-banner-wrapper .obsidian-banner .banner-image {
-    background-color: transparent !important;
-    border-radius: 0px !important;
-    z-index: 10 !important;
+    background-color: transparent ;
+    border-radius: 0px ;
+    z-index: 10 ;
 }
 
 /* Adjust frontmatter spacing when banner is present */
 .obsidian-banner-wrapper .frontmatter-container {
-    margin-top: 20px !important;
-    background-color: transparent !important;
+    margin-top: 20px ;
+    background-color: transparent ;
 }
 
 /* Ensure banner sits above other elements */
 .obsidian-banner-wrapper {
-    position: relative !important;
+    position: relative ;
 }
 
 /* For other banner plugins (Obsidian Banners, Header Image, etc.) */
 .header-image,
 .header-image-wrapper,
 .frontmatter-container .banner {
-    background-color: transparent !important;
-    background-image: none !important;
+    background-color: transparent ;
+    background-image: none ;
 }
