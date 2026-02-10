@@ -455,11 +455,9 @@ body.mocha-translucent-modals.theme-light .menu {
    NOTE CONTENT AREA
    ---------------------------- */
 /* Base Views */
-.markdown-source-view, 
-.markdown-preview-view,
+.markdown-source-view,
 .cm-s-obsidian {
-  color: var(--text-normal);
-  background-color: var(--background-primary);
+    color: var(--text-normal);
 }
 
 /* Headers */
