@@ -763,3 +763,6 @@ Fix for pixel/banner images being covered
     background-color: transparent ;
     background-image: none ;
 }
+
+.view-content .pixel-banner-image { z-index: var(--layer-sidedock) }
+
