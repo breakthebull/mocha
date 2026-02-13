@@ -121,6 +121,12 @@ settings:
     type: class-toggle
     default: true
   -
+    id: toggle-borders-off
+    title: Hide All Borders
+    description: Remove borders from buttons, modals, tables, and UI elements
+    type: class-toggle
+    default: false
+  -
     id: mocha-hide-status-bar
     title: Hide Status Bar
     description: Clean minimalist look
@@ -764,3 +770,45 @@ Fix for pixel/banner images being covered
 
 .view-content .pixel-banner-image { z-index: var(--layer-sidedock) }
 
+/* ========================================
+BORDER TOGGLE - Disable All Borders
+======================================== */
+
+/* Border Toggle Variable */
+:root {
+    --border-toggle-enabled: 1px;  /* Default: borders ON */
+    --border-toggle-disabled: 0px; /* Borders OFF */
+}
+
+/* Apply Border Toggle */
+body.toggle-borders-off * {
+    border-width: var(--border-toggle-disabled) !important;
+}
+
+/* Specific border elements to target */
+body.toggle-borders-off .modal,
+body.toggle-borders-off .prompt,
+body.toggle-borders-off .menu,
+body.toggle-borders-off .workspace-ribbon,
+body.toggle-borders-off .workspace-tabs,
+body.toggle-borders-off .status-bar,
+body.toggle-borders-off button,
+body.toggle-borders-off input,
+body.toggle-borders-off textarea,
+body.toggle-borders-off select,
+body.toggle-borders-off .dropdown,
+body.toggle-borders-off .nav-file-title,
+body.toggle-borders-off .nav-folder-title,
+body.toggle-borders-off .workspace-tab-header,
+body.toggle-borders-off table,
+body.toggle-borders-off th,
+body.toggle-borders-off td,
+body.toggle-borders-off blockquote,
+body.toggle-borders-off pre {
+    border-width: var(--border-toggle-disabled) !important;
+}
+
+/* Keep essential borders (scrollbars, etc.) */
+body.toggle-borders-off ::-webkit-scrollbar-thumb {
+    border: none !important;
+}
